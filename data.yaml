@@ -1,0 +1,6 @@
+train: data/dataset/images/train
+val: data/dataset/images/val
+test: data/dataset/images/test
+
+nc: 7
+names: ["Tea", "Empty plate", "Salad", "Soup", "Meat", "Teapot", "Empty mug"]
