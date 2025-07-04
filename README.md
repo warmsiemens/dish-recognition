@@ -19,26 +19,35 @@ pip install -r requirements.txt
 
 
 ## Разметка данных
-Используй CVAT 
+Используй CVAT
+
 Создай проект, импортируй data/raw_frames/
+
 Аннотируй bounding boxes и классы вручную
+
 Экспортируй аннотации в формате YOLO 1.1
+
 Помести экспортированные .txt в data/cvat_labels/obj_train_data
 
 
 ## Подготовка датасета
 Делим на train/val/test:
+
 python services/preparation_dataset.py
+
 Получим data/dataset/images/{train,val,test} и соответствующие labels/.
 
 
 ## Аугментация train-данных:
 python services/augmentation.py
+
 Увеличит объём данных с помощью Albumentations (повороты, яркость и т.д.).
 
 ## Обучение модели
 python train_yolo.py
 
 Модель сохраняется в runs/detect/train/weights/best.pt
+
 Результаты будут в runs/detect/predict/ — изображения с наложенными детекциями.
+
 Все графики: runs/detect/train/results.png
